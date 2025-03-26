@@ -33,17 +33,32 @@ const App = () => {
       <h1>Pokemon!</h1>
       <NavBar />
       <Routes>
-        <Route path="/" element={<h2>Home Page</h2>} />
-        <Route path="/pokemon" element={<PokemonList pokemon={pokemon} />} />
+        
+        <Route
+          path="/"
+          element={<h2>Home Page</h2>}
+        />
+        
+        <Route
+          path="/pokemon"
+          element={<PokemonList pokemon={pokemon} />}
+        />
+        
         <Route
           path="/pokemon/new"
           element={<PokemonForm addPokemon={addPokemon} />}
         />
+        
         <Route
           path="/pokemon/:pokemonId"
           element={<PokemonDetails pokemon={pokemon} />}
         />
-        <Route path="*" element={<h2>Whoops, nothing here!</h2>} />
+        
+        <Route
+          path="*"
+          element={<h2>Whoops, nothing here!</h2>}
+        />
+
       </Routes>
     </>
   );
